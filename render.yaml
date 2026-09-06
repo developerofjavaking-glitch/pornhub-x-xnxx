@@ -1,0 +1,21 @@
+services:
+  - type: worker
+    name: boom-host-bot-php
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: OWNER_LINK
+        sync: false
+      - key: CHANNEL_LINK
+        sync: false
+      - key: BOT_NAME
+        value: Boom Host Bot
+      - key: MAX_FILES_PER_USER
+        value: "3"
+      - key: MAX_UPLOAD_MB
+        value: "1"
